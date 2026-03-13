@@ -36,7 +36,7 @@ const countries = [
   "Zambia", "Zimbabwe"
 ];
 
-export default function InstagramReferralForm({ reelSource = "Shyam_test" }: { reelSource: string }) {
+export default function InstagramReferralForm({ reelSource = "Shyam--recrutiers" }: { reelSource: string }) {
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
@@ -50,7 +50,7 @@ export default function InstagramReferralForm({ reelSource = "Shyam_test" }: { r
 
   const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-  const caseStudyUrl = "https://testing-readytowork-email-mahesh.vercel.app/MAANG_Template_Resume.docx";
+  const caseStudyUrl = "https://recruiters50.lovable.app/";
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -105,14 +105,14 @@ export default function InstagramReferralForm({ reelSource = "Shyam_test" }: { r
         headers: { "Content-Type": "application/json", "authorization": `Bearer ${supabaseKey}` },
         body: JSON.stringify({
           to: email, // Send email to the client's email address
-          subject: "MAANG Resume Template",
+          subject: "50-recrutiers",
          htmlBody: `
   <p>Hi ${firstName} ${lastName}!</p>
 
   <p>Thanks for commenting on our recent reel.</p>
 
   <p>
-    As promised, here’s the MAANG-style resume template that has helped candidates structure their profiles for top tech companies.
+    As promised, here’s the 50-recrutiers these profiles form top tech companies.
 
 
   </p>
@@ -132,7 +132,7 @@ export default function InstagramReferralForm({ reelSource = "Shyam_test" }: { r
       font-weight:600;
     "
   >
-    Download Case Study
+    50-recrutiers
   </a>
 
   <br /><br />
